@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+    <events>
+        <event id="submit">
+			<click>
+				<function name="submit">this</function>
+			</click>
+		</event>
+		
+		 <event id="reset">
+			<click>
+				<function name="reset">this</function>
+			</click>
+		</event>
+		
+		<event id="sca">
+			<click>
+				<function name="sca">this</function>
+			</click>
+		</event>
+		
+		<event id="sma">
+			<click>
+				<function name="sma">this</function>
+			</click>
+		</event>
+    </events>
+
+    <image id="bg" x="0" y="0" anim="show" animtime="1" opacity = "1A"><![CDATA[lib/assets/life_changing_scientific_discoveries.jpg]]></image>
+	
+<!--	<text id="title" x="180" y="30" width="430" anim="scaleup" animtime="1" animdelay="0.7"><![CDATA[<h1>Drag & Drop #1</h1><p style="color:#fff">See if you can identify these six carrers in this interesting game.<br/>Drag each label to the appropriate careers then click on Confirm button.</p>]]></text>  -->
+	
+	<text id="title" x="20" y="20" width="450" anim="scaleup" animtime="1" animdelay="0.7"><![CDATA[<div id="title" style="position: absolute;visibility: visible;top: 20px;width: 480px;opacity: 1;transform: scale(1, 1);display: block;"><div style="float: left;"><img src="lib/assets/C3D_K-12_Logo_NEW_Learning_new.png" height="50px"></div><div style="padding-top: 10px;line-height: 24px;"><h1 style="color:#fff;font-size: 26px;margin-left: 160px;border: 1.5mm ridge rgba(0, 81, 131, 1); padding: 10px; text-align: center; background-color: #5a5001;line-height:1em;">Life Changing Scientific Discoveries</h1></div></div>]]></text>
+	
+	<!--drop zones. Note: should be lower stacking order to draggables-->
+	<box id="drop1" x="320" y="185" width="166" height="38" anim="none" />
+	<box id="drop2" x="320" y="345" width="166" height="38" anim="none" />
+	<box id="drop3" x="320" y="505" width="166" height="38" anim="none" />
+	<box id="drop4" x="528" y="185" width="166" height="38" anim="none" />
+	<box id="drop5" x="528" y="345" width="166" height="38" anim="none" />  
+	<box id="drop6" x="528" y="505" width="166" height="38" anim="none" />  
+<!--	<box id="drop7" x="746" y="420" width="80" height="34" anim="none" /> -->
+<!--	<box id="drop8" x="824" y="215" width="80" height="34" anim="none" /> -->
+   	
+	<!--draggables-->
+	<text id="drag1" x="730" y="72" width="166" height="38" anim="scaleup" animtime="1" animdelay="1.3" class="blueBox"><![CDATA[<p class="drag cent">IT Engineer</p>]]></text>
+	
+	<text id="drag2" x="550" y="27" width="166" height="38" anim="scaleup" animtime="1" animdelay="1" class="blueBox"><![CDATA[<p class="drag cent">Chemist</p>]]></text>
+
+	<text id="drag3" x="730" y="27" width="166" height="38" anim="scaleup" animtime="1" animdelay="1.4" class="blueBox"><![CDATA[<p class="drag cent">Astronomer</p>]]></text>
+	
+	<text id="drag4" x="613" y="608" width="166" height="38" anim="scaleup" animtime="1" animdelay="1.7" class="blueBox"><![CDATA[<p class="drag cent">Park Ranger</p>]]></text>
+	
+	<text id="drag5" x="791" y="608" width="166" height="38" anim="scaleup" animtime="1" animdelay="1.6" class="blueBox"><![CDATA[<p class="drag cent">Petroleum Geologist</p>]]></text> 
+	
+	<text id="drag6" x="550" y="72" width="166" height="38" anim="scaleup" animtime="1" animdelay="1.1" class="blueBox"><![CDATA[<p class="drag cent">Zoologist</p>]]></text> 
+
+<!--    <text id="drag7" x="730" y="72" width="80" anim="scaleup" animtime="1" animdelay="1.5" class="blueBox"><![CDATA[<p class="white cent">URANUS</p>]]></text> -->
+    
+ <!--   <text id="drag8" x="640" y="27" width="80" anim="scaleup" animtime="1" animdelay="1.2" class="blueBox"><![CDATA[<p class="white cent">NEPTUNE</p>]]></text> -->
+
+	<!--buttons-->
+	<button id="submitBtn" x="110" y="610" width="100" height="34" anim="disable" animdelay="1.7" class="myButton" event="submit"><![CDATA[<p>Confirm</p>]]></button>
+	<button id="resetBtn" x="221" y="610" width="100" height="34" anim="hide" class="myButton" event="reset"><![CDATA[<p>Reset</p>]]></button>
+	<button id="scaBtn" x="331" y="610" width="110" height="34" anim="hide" class="myButton" event="sca"><![CDATA[<p>Show me</p>]]></button>
+	<button id="smaBtn" x="395" y="610" width="132" height="37" anim="hide" class="myButton" event="sma"><![CDATA[<p>See my answer</p>]]></button>
+	
+    <custom id="custom" type="dragdrop">
+	
+        <settings dropscale="1" attempts="" forcedragall="true"/>
+
+        <drag match="1">drag1</drag>
+        <drag match="2">drag2</drag>
+        <drag match="3">drag3</drag>
+        <drag match="4">drag4</drag>
+<!--        <drag match="5">drag5</drag>
+        <drag match="6">drag6</drag>  -->
+  <!--      <drag match="7">drag7</drag>
+        <drag match="8">drag8</drag> -->
+		
+        <drop id="1" dropposition="show" stack="false" stackpaddingv="0" stackpaddingh="0" maxdrop="1" xoffset="0" yoffset="0">drop1</drop>
+        <drop id="2" dropposition="show" stack="false" stackpaddingv="0" stackpaddingh="0" maxdrop="1" xoffset="0" yoffset="0">drop2</drop>
+        <drop id="3" dropposition="show" stack="false" stackpaddingv="0" stackpaddingh="0" maxdrop="1" xoffset="0" yoffset="0">drop3</drop>
+        <drop id="4" dropposition="show" stack="false" stackpaddingv="0" stackpaddingh="0" maxdrop="1" xoffset="0" yoffset="0">drop4</drop>
+ <!--       <drop id="5" dropposition="show" stack="false" stackpaddingv="0" stackpaddingh="0" maxdrop="1" xoffset="0" yoffset="0">drop5</drop>
+        <drop id="6" dropposition="show" stack="false" stackpaddingv="0" stackpaddingh="0" maxdrop="1" xoffset="0" yoffset="0">drop6</drop> -->
+  <!--      <drop id="7" dropposition="show" stack="false" stackpaddingv="0" stackpaddingh="0" maxdrop="1" xoffset="0" yoffset="0">drop7</drop>
+        <drop id="8" dropposition="show" stack="false" stackpaddingv="0" stackpaddingh="0" maxdrop="1" xoffset="0" yoffset="0">drop8</drop>  -->
+		
+		<!--feedbacks -->
+		<fb id="pass" event="">	
+			<text id="passTxt" x="420" y="616" width="400" anim="scaleup" animtime="1"><![CDATA[<p class="perfect">Perfect. Nicely done!</p>]]></text>
+		</fb>
+		
+		<fb id="partial" event="">	
+			<text id="partialTxt" x="574" y="600" width="400" anim="scaleup" animtime="1"><![CDATA[<p class="white">Houston, we have a problem! You got some of them right but not all.</p><p class="white">Select Reset to try again or Show me to see the correct answer.</p>]]></text>	
+		</fb>
+		
+		<fb id="fail" event="">	
+			<text id="failTxt" x="594" y="606" width="400" anim="scaleup" animtime="1"><![CDATA[<p class="white">Houston, we have a problem!</p><p class="white">Select Reset to try again or Show me to see the correct answer.</p>]]></text>	
+		</fb>
+		<!--/feedbacks -->
+    </custom>
+
+</data>
+

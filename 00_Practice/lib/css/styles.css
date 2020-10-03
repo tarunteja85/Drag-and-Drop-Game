@@ -1,0 +1,103 @@
+@charset "utf-8";
+html{height:100%;width:100%;box-sizing: border-box;}
+*{margin:0;padding:0;box-sizing: inherit;}
+*:before, *:after {box-sizing: inherit;}
+body{font-family:'Roboto Condensed', sans-serif;color:#222;font-size:14px;line-height:21px;background:#eee;height:100%;}
+
+.valign{position:relative;
+    float:left;
+    height:50%;
+    margin-bottom:-335px; /* half the containers height */
+    position:relative;
+    width:1px;
+}
+.center{text-align:center;clear:both;width:1014px; height:670px;position:relative;margin:0 auto; border:none;overflow:hidden;box-shadow:0px 0px 60px rgba(0,0,0,0.3)}
+#container{position:absolute;border:none;width:1014px;height:670px;overflow:hidden;text-align: left;}
+
+h1{font-size:28px;margin-bottom:16px;color:orange;}
+p{font-size:16px;line-height:21px;}
+p:last-child{margin-bottom:0px;}
+a{font-size:14px;}
+input{font-family:'Roboto Condensed', sans-serif;background:#fff;font-size:18px;padding:6px 10px 6px 10px;border:1px solid #ccc;-webkit-appearance:none;border-radius:0px;}
+img{display:block;} /* remove bottom padding */ 
+
+.myButton input{background:#1e2469;color:#fff;}
+.myButton input:hover:enabled{background:#84bc01;color:#000;}
+.dragItem{box-shadow: 0px 0px 10px rgba(0,0,0,0.2);}
+.dropZone{background:#fff;box-shadow: 0px 0px 10px rgba(0,0,0,0.2);}
+.feedbackBox{background:#fff;padding:10px;}
+.blueBox{background:#0c0e54;padding:8px;}
+.cent{text-align:center;}
+.white{color:#000;}
+.black{color:black;}
+.border{border:1px solid red;}
+.drag{color:#fff; font-size:18px;}
+.perfect{font-size:18px;}
+
+/* preloader */
+.preloader{
+    width:34px;
+    height:34px;
+    display:inline-block;
+    padding:0px;
+    
+    border-radius:100%;
+    border:2px solid;
+    border-top-color:rgba(0,0,0, 0.8);
+    border-bottom-color:rgba(0,0,0, 0.2);
+    border-left-color:rgba(0,0,0, 0.8);
+    border-right-color:rgba(0,0,0, 0.2);
+    outline: 1px solid transparent;
+
+    -webkit-animation: preloader 1s linear infinite;
+    animation: preloader 1s linear infinite;
+}
+@keyframes preloader{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+@-webkit-keyframes preloader{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
+}
+#drop1 {
+	background-color: #850ec1;
+	border-style: solid;
+}
+#drop2 {
+	background-color: #231aab;
+	border-style: solid;
+}
+#drop3 {
+	background-color: #ab1d1d;
+	border-style: solid;
+}
+#drop4 {
+	background-color: #850ec1;
+	border-style: solid;
+}
+#drop5 {
+	background-color: #231aab;
+	border-style: solid;
+}
+#drop6 {
+	background-color: #ab1d1d;
+	border-style: solid;
+} /*
+#drop7 {
+	background-color: orange;
+	border-style: solid;
+}
+#drop8 {
+	background-color: orange;
+	border-style: solid;
+} */
+
+/*#bg{
+    opacity: 0.1;
+}*/
+
+/*#logo{
+    content: url("../assets/C3D_K-12_Logo_NEW_Learning_new.png");
+    height: 200px;
+} */
